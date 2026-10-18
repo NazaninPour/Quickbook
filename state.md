@@ -1,4 +1,4 @@
-Version: v1.4 · Date: 2026-10-18 · Time: 17:09 UTC · Created by: Nauz
+Version: v1.5 · Date: 2026-10-18 · Time: 17:38 UTC · Created by: Nauz
 
 # QuickBook — State
 
@@ -12,7 +12,8 @@ Version: v1.4 · Date: 2026-10-18 · Time: 17:09 UTC · Created by: Nauz
 | Receptionist flow: Customer record → Schedule → Reminders | Built | Each screen has Default, Empty, Loading and Error. Schedule is a single CSS time grid (30 min = 1 row). Clicked through end to end by script with no errors. |
 | StateSwitcher (design tool) | Built | Floating bar: 9 screen buttons + 4 state buttons. All 36 combinations render with no errors. |
 | Narrow window | Checked by script | No sideways overflow on any screen at 640 px wide. Not checked by eye. |
-| GitHub + live site | Prepared, not pushed | Local Git history created with a remote pointing at github.com/NazaninPour/Quickbook. Waiting for you to push from GitHub Desktop and turn on GitHub Pages. Live address once published: https://nazaninpour.github.io/Quickbook/ |
+| GitHub | Pushed | Code is on github.com/NazaninPour/Quickbook (private), without the research. On GitHub the app builds with no errors. |
+| Live site (GitHub Pages) | Not available | GitHub's free plan has no Pages for private repos. Each push still runs the workflow: the build passes, the publish step fails. |
 | Phone version | Not started | You will ask for it separately. |
 | Back end / real data | Not started | All data is fake, in `src/data.ts`. Bookings made in the app are lost on reload. |
 | Edge cases (failures, long names, double clicks, coming back later) | Not built | Listed in the chat for you to decide on. |
@@ -52,6 +53,9 @@ Version: v1.4 · Date: 2026-10-18 · Time: 17:09 UTC · Created by: Nauz
 | 2026-10-18 | The `researches` and `.claude` folders are not uploaded (added to `.gitignore`). | You chose to keep the research on this Mac only. `.claude` is local app settings. |
 | 2026-10-18 | Git author is "Nauz" with your GitHub no-reply email (97505066+NazaninPour@users.noreply.github.com), set for this project only. | Hides your real email in public history (your choice). |
 | 2026-10-18 | You push with GitHub Desktop; Claude does not sign in. | No GitHub login on this Mac, and Claude does not handle passwords or tokens. |
+| 2026-10-18 | Combined the README GitHub created ("# Quickbook") with the project instead of overwriting it; the project README was kept. | The repo already had one commit; nothing on GitHub was deleted. |
+| 2026-10-18 | Keep the repo private, so no live website for now. | Your choice. Pages on a private repo needs a paid plan or making the repo public. |
+| 2026-10-18 | GitHub CLI 2.102.0 installed in ~/.local/bin (checksum and GitHub signature checked); signed in as NazaninPour through the browser. | So Claude can push for you. Claude never saw a password or token. |
 
 ## History
 
@@ -62,3 +66,4 @@ Version: v1.4 · Date: 2026-10-18 · Time: 17:09 UTC · Created by: Nauz
 | 2026-10-18 | Added `design-system.md` (Material Design 3 foundations: colour roles, type scale, spacing, corner radii). No app files changed. |
 | 2026-10-18 | Applied design-system.md: new tokens in `src/global.css`; all 15 component and screen CSS files rewritten to use them; Roboto link in `index.html`; border widths added to design-system.md (v1.1). No content, flow or behaviour changed. |
 | 2026-10-18 | Prepared deployment: GitHub Pages workflow, build path in `vite.config.js`, `researches/` and `.claude/` added to `.gitignore`, local Git history with first commit. Not pushed yet. |
+| 2026-10-18 | Pushed to github.com/NazaninPour/Quickbook (private). GitHub build passes; publishing to Pages failed because Pages is not available for this private repo. |
