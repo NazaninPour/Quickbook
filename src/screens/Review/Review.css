@@ -1,0 +1,21 @@
+.review__note {
+  display: flex;
+  align-items: center;
+  gap: var(--space-100);
+  margin: 0;
+  padding: var(--space-150) var(--space-200);
+  background: var(--color-surface-container);
+  border-radius: var(--radius-medium);
+}
+
+.review__icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: var(--space-300);
+  height: var(--space-300);
+  font: var(--type-label-large);
+  font-style: italic;
+  border: var(--border-thin) solid var(--color-on-surface);
+  border-radius: var(--radius-full);
+}

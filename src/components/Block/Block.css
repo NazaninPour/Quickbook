@@ -1,0 +1,15 @@
+.block {
+  display: grid;
+  gap: var(--space-150);
+  min-width: 0;
+  padding: var(--space-200);
+  background: var(--color-surface-container-lowest);
+  border: var(--border-thin) solid var(--color-outline);
+  border-radius: var(--radius-medium);
+}
+
+.block__title {
+  margin: 0;
+  font: var(--type-title-medium);
+  letter-spacing: var(--type-title-medium-tracking);
+}

@@ -1,0 +1,54 @@
+.branch__list {
+  display: grid;
+  gap: var(--space-100);
+}
+
+.branch__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-50) var(--space-100);
+  font: var(--type-title-medium);
+  letter-spacing: var(--type-title-medium-tracking);
+}
+
+.branch__tag {
+  padding: 0 var(--space-100);
+  font: var(--type-label-medium);
+  letter-spacing: var(--type-label-medium-tracking);
+  border: var(--border-thin) solid currentColor;
+  border-radius: var(--radius-full);
+}
+
+.branch__address {
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}
+
+.branch__primary {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.branch__save {
+  display: flex;
+  align-items: center;
+  gap: var(--space-100);
+  padding: var(--space-150) var(--space-200);
+  background: var(--color-surface-container-lowest);
+  border: var(--border-thin) solid var(--color-outline);
+  border-radius: var(--radius-medium);
+  cursor: pointer;
+}
+
+.branch__save input {
+  width: var(--space-200);
+  height: var(--space-200);
+  margin: 0;
+}
+
+.branch__save--off {
+  color: var(--color-on-surface-variant);
+  cursor: not-allowed;
+}

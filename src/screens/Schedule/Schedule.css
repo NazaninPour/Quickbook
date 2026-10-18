@@ -1,0 +1,153 @@
+.schedule__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-150) var(--space-300);
+}
+
+.schedule__field {
+  display: grid;
+  gap: var(--space-50);
+  min-width: 0;
+}
+
+.schedule__field span {
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}
+
+.schedule__field select {
+  max-width: 100%;
+  padding: var(--space-100);
+  background: var(--color-surface-container-lowest);
+  border: var(--border-thin) solid var(--color-outline);
+  border-radius: var(--radius-small);
+}
+
+.schedule__for {
+  display: grid;
+  gap: var(--space-50);
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.schedule__for span {
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}
+
+.schedule__scroll {
+  min-width: 0;
+}
+
+/* The time grid: one time column + one column per therapist, one row per 30 minutes.
+   Column and row counts are set from the data in Schedule.tsx. */
+.schedule__grid {
+  display: grid;
+  gap: var(--border-medium);
+  font: var(--type-body-small);
+  letter-spacing: var(--type-body-small-tracking);
+  background: var(--color-surface-container-high);
+  border: var(--border-medium) solid var(--color-surface-container-high);
+  border-radius: var(--radius-small);
+}
+
+.schedule__corner,
+.schedule__head {
+  padding: var(--space-100);
+  font: var(--type-title-small);
+  letter-spacing: var(--type-title-small-tracking);
+  background: var(--color-surface-container-lowest);
+  overflow-wrap: anywhere;
+}
+
+.schedule__time {
+  padding: var(--space-50) var(--space-100);
+  color: var(--color-on-surface-variant);
+  background: var(--color-surface-container-lowest);
+  font-variant-numeric: tabular-nums;
+}
+
+.schedule__cell {
+  display: flex;
+  min-width: 0;
+  padding: var(--space-50);
+  background: var(--color-surface-container-lowest);
+}
+
+.schedule__free {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-50);
+  text-align: left;
+  background: transparent;
+  border: var(--border-thin) dashed var(--color-outline);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+
+.schedule__free:hover {
+  border-style: solid;
+  border-color: var(--color-on-surface);
+}
+
+/* Booked: darker fill + thick left edge + the word "Booked" */
+.schedule__booking,
+.schedule__picked {
+  z-index: 1;
+  display: grid;
+  align-content: start;
+  gap: var(--space-50);
+  min-width: 0;
+  padding: var(--space-50) var(--space-100);
+  overflow-wrap: anywhere;
+  background: var(--color-surface-container-highest);
+  border-left: var(--border-thick) solid var(--color-on-surface);
+  border-radius: var(--radius-small);
+}
+
+/* New: dashed outline + the words "New booking" */
+.schedule__booking--new {
+  border: var(--border-medium) dashed var(--color-on-surface);
+  border-left-width: var(--border-thick);
+}
+
+/* Selected: light fill, thick outline, a tick and the word "Selected" */
+.schedule__picked {
+  z-index: 2;
+  background: var(--color-surface-container-lowest);
+  border: var(--border-thick) solid var(--color-on-surface);
+}
+
+.schedule__booking-label {
+  font: var(--type-label-medium);
+  letter-spacing: var(--type-label-medium-tracking);
+  text-transform: uppercase;
+}
+
+.schedule__booking-name {
+  font: var(--type-title-small);
+  letter-spacing: var(--type-title-small-tracking);
+}
+
+.schedule__booking-meta {
+  color: var(--color-on-surface-variant);
+}
+
+.schedule__picked .schedule__booking-meta {
+  color: var(--color-on-surface);
+}
+
+.schedule__unpick {
+  justify-self: start;
+  padding: 0;
+  font: var(--type-label-large);
+  letter-spacing: var(--type-label-large-tracking);
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}

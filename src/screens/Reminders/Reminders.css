@@ -1,0 +1,85 @@
+.reminders__days {
+  display: grid;
+  gap: var(--space-300);
+}
+
+.reminders__day {
+  display: grid;
+  gap: var(--space-100);
+}
+
+.reminders__date {
+  margin: 0;
+  font: var(--type-title-small);
+  letter-spacing: var(--type-title-small-tracking);
+}
+
+.reminders__soon {
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}
+
+.reminders__list {
+  display: grid;
+  gap: var(--space-100);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reminders__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-50) var(--space-200);
+  padding: var(--space-150);
+  border: var(--border-thin) solid var(--color-outline);
+  border-radius: var(--radius-medium);
+}
+
+/* New: dashed border + the "New" tag (not colour alone) */
+.reminders__item--new {
+  padding: calc(var(--space-150) + var(--border-thin) - var(--border-medium));
+  border: var(--border-medium) dashed var(--color-on-surface);
+}
+
+.reminders__time {
+  flex: 0 0 6.5rem;
+  font: var(--type-title-medium);
+  letter-spacing: var(--type-title-medium-tracking);
+  font-variant-numeric: tabular-nums;
+}
+
+.reminders__who {
+  display: flex;
+  flex: 1 1 12rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-50) var(--space-100);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.reminders__phone {
+  flex-basis: 100%;
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}
+
+.reminders__tag {
+  padding: 0 var(--space-100);
+  font: var(--type-label-medium);
+  letter-spacing: var(--type-label-medium-tracking);
+  border: var(--border-thin) solid currentColor;
+  border-radius: var(--radius-full);
+}
+
+.reminders__what {
+  flex: 1 1 14rem;
+  min-width: 0;
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+  overflow-wrap: anywhere;
+}

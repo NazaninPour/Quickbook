@@ -1,0 +1,15 @@
+.therapist__list {
+  display: grid;
+  gap: var(--space-100);
+}
+
+.therapist__name {
+  font: var(--type-title-medium);
+  letter-spacing: var(--type-title-medium-tracking);
+}
+
+.therapist__days {
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}

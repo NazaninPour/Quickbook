@@ -1,0 +1,74 @@
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-150);
+  width: 100%;
+  min-width: 0;
+  padding: var(--space-150) var(--space-200);
+  text-align: left;
+  background: var(--color-surface-container-lowest);
+  border: var(--border-thin) solid var(--color-outline);
+  border-radius: var(--radius-medium);
+  cursor: pointer;
+}
+
+.choice:hover {
+  border-color: var(--color-on-surface);
+}
+
+/* Selected: thick border + tick + the word "Selected" (not colour alone).
+   Padding shrinks by the extra border width so the card doesn't move. */
+.choice[aria-pressed='true'] {
+  padding: calc(var(--space-150) + var(--border-thin) - var(--border-thick))
+    calc(var(--space-200) + var(--border-thin) - var(--border-thick));
+  background: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+  border: var(--border-thick) solid var(--color-on-primary-container);
+}
+
+.choice__mark {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: var(--space-200);
+  height: var(--space-200);
+  margin-top: var(--space-50);
+  font: var(--type-label-medium);
+  border: var(--border-thin) solid currentColor;
+  border-radius: var(--radius-full);
+}
+
+.choice__body {
+  display: grid;
+  flex: 1;
+  gap: var(--space-50);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.choice__selected {
+  flex: none;
+  font: var(--type-label-medium);
+  letter-spacing: var(--type-label-medium-tracking);
+  text-transform: uppercase;
+}
+
+/* Compact: the time chips and length chips */
+.choice--compact {
+  width: auto;
+  align-items: center;
+  gap: var(--space-50);
+  padding: var(--space-100) var(--space-150);
+  font: var(--type-label-large);
+  letter-spacing: var(--type-label-large-tracking);
+  border-radius: var(--radius-small);
+}
+
+.choice--compact[aria-pressed='true'] {
+  padding: calc(var(--space-100) + var(--border-thin) - var(--border-thick))
+    calc(var(--space-150) + var(--border-thin) - var(--border-thick));
+}
+
+.choice--compact .choice__mark {
+  margin-top: 0;
+}

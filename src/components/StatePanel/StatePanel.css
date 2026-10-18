@@ -1,0 +1,91 @@
+.state {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-50);
+  padding: var(--space-300) var(--space-200);
+  text-align: center;
+  border-radius: var(--radius-medium);
+}
+
+/* Empty: dashed border, open circle */
+.state--empty {
+  border: var(--border-medium) dashed var(--color-outline);
+}
+
+/* Loading: dotted border, moving bars */
+.state--loading {
+  border: var(--border-medium) dotted var(--color-outline);
+}
+
+/* Error: thick solid border, exclamation mark in a circle */
+.state--error {
+  color: var(--color-on-error-container);
+  background: var(--color-error-container);
+  border: var(--border-thick) solid var(--color-error);
+}
+
+.state__icon {
+  display: grid;
+  place-items: center;
+  width: var(--space-400);
+  height: var(--space-400);
+  font: var(--type-title-medium);
+}
+
+.state--error .state__icon {
+  border: var(--border-medium) solid var(--color-error);
+  border-radius: var(--radius-full);
+}
+
+.state__label {
+  margin: 0;
+  font: var(--type-label-medium);
+  letter-spacing: var(--type-label-medium-tracking);
+  text-transform: uppercase;
+}
+
+.state__text {
+  margin: 0;
+  color: var(--color-on-surface-variant);
+  overflow-wrap: anywhere;
+}
+
+.state--error .state__text {
+  color: var(--color-on-error-container);
+}
+
+.state__bars {
+  display: flex;
+  gap: var(--space-50);
+  height: var(--space-400);
+  align-items: center;
+}
+
+.state__bars i {
+  display: block;
+  width: var(--space-100);
+  height: var(--space-200);
+  background: var(--color-surface-container-highest);
+  border-radius: var(--radius-small);
+  animation: state-pulse 1s ease-in-out infinite;
+}
+
+.state__bars i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.state__bars i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes state-pulse {
+  50% {
+    transform: scaleY(0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .state__bars i {
+    animation: none;
+  }
+}

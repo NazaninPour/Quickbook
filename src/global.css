@@ -1,0 +1,93 @@
+/* Design tokens from design-system.md (Material Design 3 foundations), plus page-wide basics.
+   Each component keeps its own styles in its own CSS file and uses only these variables. */
+:root {
+  /* 1. Colour roles (light theme) */
+  --color-primary: #1c1c1b;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #e2e2df;
+  --color-on-primary-container: #1c1c1b;
+  --color-error: #1c1c1b;
+  --color-on-error: #ffffff;
+  --color-error-container: #f0f0ee;
+  --color-on-error-container: #1c1c1b;
+  --color-surface: #f7f7f6;
+  --color-on-surface: #1c1c1b;
+  --color-on-surface-variant: #5c5c58;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f2f0;
+  --color-surface-container: #ececea;
+  --color-surface-container-high: #e6e6e3;
+  --color-surface-container-highest: #d6d6d2;
+  --color-outline: #82827e;
+  --color-outline-variant: #c9c9c5;
+
+  /* 2. Type scale — use as: font: var(--type-x); letter-spacing: var(--type-x-tracking); */
+  --font-family: Roboto, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --type-headline-medium: 400 1.75rem / 2.25rem var(--font-family);
+  --type-headline-medium-tracking: 0;
+  --type-title-medium: 500 1rem / 1.5rem var(--font-family);
+  --type-title-medium-tracking: 0.009em;
+  --type-title-small: 500 0.875rem / 1.25rem var(--font-family);
+  --type-title-small-tracking: 0.007em;
+  --type-body-large: 400 1rem / 1.5rem var(--font-family);
+  --type-body-large-tracking: 0.031em;
+  --type-body-medium: 400 0.875rem / 1.25rem var(--font-family);
+  --type-body-medium-tracking: 0.018em;
+  --type-body-small: 400 0.75rem / 1rem var(--font-family);
+  --type-body-small-tracking: 0.033em;
+  --type-label-large: 500 0.875rem / 1.25rem var(--font-family);
+  --type-label-large-tracking: 0.007em;
+  --type-label-medium: 500 0.75rem / 1rem var(--font-family);
+  --type-label-medium-tracking: 0.042em;
+
+  /* 3. Spacing scale */
+  --space-50: 4px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-600: 48px;
+
+  /* 4. Corner radii */
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-full: 999px;
+
+  /* 5. Border widths */
+  --border-thin: 1px;
+  --border-medium: 2px;
+  --border-thick: 4px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: var(--type-body-large);
+  letter-spacing: var(--type-body-large-tracking);
+  color: var(--color-on-surface);
+  background: var(--color-surface);
+}
+
+button,
+input,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+/* The type scale has no bold; emphasised words use the scale's medium weight (500). */
+strong {
+  font-weight: 500;
+}
+
+:focus-visible {
+  outline: var(--border-medium) solid var(--color-on-surface);
+  outline-offset: var(--border-medium);
+}

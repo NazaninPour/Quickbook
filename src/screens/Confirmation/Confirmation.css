@@ -1,0 +1,32 @@
+.confirmation {
+  display: grid;
+  gap: var(--space-200);
+}
+
+.confirmation__message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-100);
+  margin: 0;
+  font: var(--type-title-medium);
+  letter-spacing: var(--type-title-medium-tracking);
+}
+
+.confirmation__tick {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: var(--space-300);
+  height: var(--space-300);
+  border: var(--border-medium) solid var(--color-on-surface);
+  border-radius: var(--radius-full);
+}
+
+.confirmation__next {
+  margin: 0;
+  padding-top: var(--space-150);
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+  border-top: var(--border-thin) solid var(--color-outline-variant);
+}

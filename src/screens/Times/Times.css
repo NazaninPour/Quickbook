@@ -1,0 +1,66 @@
+.times__group {
+  display: grid;
+  gap: var(--space-150);
+  padding: var(--space-150);
+  background: var(--color-surface-container-low);
+  border-radius: var(--radius-small);
+}
+
+.times__heading {
+  margin: 0;
+  font: var(--type-title-medium);
+  letter-spacing: var(--type-title-medium-tracking);
+  overflow-wrap: anywhere;
+}
+
+.times__note {
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}
+
+.times__days {
+  display: grid;
+  gap: var(--space-300);
+}
+
+.times__day {
+  display: grid;
+  gap: var(--space-100);
+}
+
+.times__date {
+  margin: 0;
+  font: var(--type-title-small);
+  letter-spacing: var(--type-title-small-tracking);
+}
+
+.times__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-100) var(--space-150);
+}
+
+.times__who {
+  flex: 0 0 8rem;
+  min-width: 0;
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+  overflow-wrap: anywhere;
+}
+
+.times__chips {
+  display: flex;
+  flex: 1 1 12rem;
+  flex-wrap: wrap;
+  gap: var(--space-100);
+}
+
+.times__none {
+  margin: 0;
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}

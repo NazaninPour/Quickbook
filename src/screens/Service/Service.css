@@ -1,0 +1,28 @@
+.service__list {
+  display: grid;
+  gap: var(--space-100);
+}
+
+.service__name {
+  font: var(--type-title-medium);
+  letter-spacing: var(--type-title-medium-tracking);
+}
+
+.service__lengths {
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}
+
+.service__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-100);
+}
+
+.service__hint {
+  margin: 0;
+  font: var(--type-body-medium);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--color-on-surface-variant);
+}
